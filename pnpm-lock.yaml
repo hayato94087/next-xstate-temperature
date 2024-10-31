@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@xstate/react':
+        specifier: ^4.1.3
+        version: 4.1.3(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)(xstate@5.18.2)
       next:
         specifier: 15.0.2
         version: 15.0.2(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react@19.0.0-rc-02c0e824-20241028)
@@ -17,6 +20,9 @@ importers:
       react-dom:
         specifier: 19.0.0-rc-02c0e824-20241028
         version: 19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028)
+      xstate:
+        specifier: ^5.18.2
+        version: 5.18.2
     devDependencies:
       '@types/node':
         specifier: ^20
@@ -370,6 +376,15 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+
+  '@xstate/react@4.1.3':
+    resolution: {integrity: sha512-zhE+ZfrcCR87bu71Rkh5Z5ruZBivR/7uD/dkelzJqjQdI45IZc9DqTI8lL4Cg5+VN2p5k86KxDsusqW1kW11Tg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      xstate: ^5.18.2
+    peerDependenciesMeta:
+      xstate:
+        optional: true
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1590,6 +1605,20 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
+  use-isomorphic-layout-effect@1.1.2:
+    resolution: {integrity: sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
+  use-sync-external-store@1.2.2:
+    resolution: {integrity: sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
@@ -1627,6 +1656,9 @@ packages:
 
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
+
+  xstate@5.18.2:
+    resolution: {integrity: sha512-hab5VOe29D0agy8/7dH1lGw+7kilRQyXwpaChoMu4fe6rDP+nsHYhDYKfS2O4iXE7myA98TW6qMEudj/8NXEkA==}
 
   yaml@2.6.0:
     resolution: {integrity: sha512-a6ae//JvKDEra2kdi1qzCyrJW/WZCgFi8ydDV+eXExl95t+5R+ijnqHJbz9tmMh8FUjx3iv2fCQ4dclAQlO2UQ==}
@@ -1938,6 +1970,16 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@ungap/structured-clone@1.2.0': {}
+
+  '@xstate/react@4.1.3(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)(xstate@5.18.2)':
+    dependencies:
+      react: 19.0.0-rc-02c0e824-20241028
+      use-isomorphic-layout-effect: 1.1.2(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028)
+      use-sync-external-store: 1.2.2(react@19.0.0-rc-02c0e824-20241028)
+    optionalDependencies:
+      xstate: 5.18.2
+    transitivePeerDependencies:
+      - '@types/react'
 
   acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:
@@ -3404,6 +3446,16 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
+  use-isomorphic-layout-effect@1.1.2(@types/react@18.3.12)(react@19.0.0-rc-02c0e824-20241028):
+    dependencies:
+      react: 19.0.0-rc-02c0e824-20241028
+    optionalDependencies:
+      '@types/react': 18.3.12
+
+  use-sync-external-store@1.2.2(react@19.0.0-rc-02c0e824-20241028):
+    dependencies:
+      react: 19.0.0-rc-02c0e824-20241028
+
   util-deprecate@1.0.2: {}
 
   which-boxed-primitive@1.0.2:
@@ -3463,6 +3515,8 @@ snapshots:
       strip-ansi: 7.1.0
 
   wrappy@1.0.2: {}
+
+  xstate@5.18.2: {}
 
   yaml@2.6.0: {}
 
